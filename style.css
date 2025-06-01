@@ -1,0 +1,114 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff0f5;
+    color: #4a3f47;
+    transition: background 0.5s ease;
+}
+header {
+    background: #f7c8e0;
+    color: #4a3f47;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: #f9d5e5;
+    padding: 1rem;
+    gap: 1rem;
+}
+.tabs button {
+    background: #fcd5e8;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.tabs button.active, .tabs button:hover {
+    background: #f9a8d4;
+    color: white;
+}
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 0.6s ease-in;
+}
+.about-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+.about-block img {
+    max-width: 200px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+a {
+    color: #d63384;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.download-btn {
+    background: #ffdce4;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #4a3f47;
+    transition: background 0.3s;
+}
+.download-btn:hover {
+    background: #f9a8d4;
+    color: white;
+}
+
+.dark-mode {
+    background: #2c2c2c;
+    color: #fce4ec;
+}
+.dark-mode header {
+    background: #3b3b3b;
+    color: #fff;
+}
+.dark-mode a {
+    color: #ffb6c1;
+}
+.dark-mode .card,
+.dark-mode .about-block img {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+.dark-mode .tabs {
+    background: #444;
+}
+.dark-mode .tabs button {
+    background: #666;
+    color: #fff;
+}
+.dark-mode .tabs button.active {
+    background: #ff69b4;
+}

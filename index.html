@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио Мельниковой Алены</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showTab(tab) {
+            document.getElementById('about').style.display = tab === 'about' ? 'block' : 'none';
+            document.getElementById('labs').style.display = tab === 'labs' ? 'block' : 'none';
+            document.getElementById('tab-about').classList.toggle('active', tab === 'about');
+            document.getElementById('tab-labs').classList.toggle('active', tab === 'labs');
+        }
+        window.onload = function() {
+            showTab('about');
+        }
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Портфолио Мельниковой Алены</h1>
+        <p>Testing specialist в компании Kaspersky Lab</p>
+        <button class="download-btn" onclick="location.href='labs.html'">📁 Смотреть лабораторные</button>
+        <button class="download-btn" onclick="toggleTheme()">🌓 Переключить тему</button>
+    </header>
+    <nav class="tabs">
+        <button id="tab-about" onclick="showTab('about')">Обо мне</button>
+        <button id="tab-labs" onclick="showTab('labs')">Лабораторные</button>
+    </nav>
+    <main>
+        <section id="about">
+            <div class="about-block">
+                <img src="me.jpg" alt="Фото Мельниковой Алены">
+                <div>
+                    <p>Меня зовут <strong>Мельникова Алена</strong>, я Testing specialist в компании <strong>Kaspersky Lab</strong>.</p>
+                    <p>Я — студентка РГПУ им. А.И. Герцена по направлению «Информатика и вычислительная техника».</p>
+                    <p>На этом сайте представлено моё портфолио — работы, проекты и лабораторные, выполненные за 4 года обучения.</p>
+                    <p>Я выбрала путь <strong>тестировщика ПО</strong> и продолжаю развиваться в этом направлении.</p>
+                    <p>Ниже — мои лабораторные, где можно увидеть мой технический прогресс и интерес к деталям.</p>
+                </div>
+            </div>
+        </section>
+        <section id="labs" style="display: none;">
+            <ul>
+                <li><a href="labs/Application_software_packages/" target="_blank">Application_software_packages</a></li>
+                <li><a href="labs/Computing_technology/" target="_blank">Computing_technology</a></li>
+                <li><a href="labs/Data_bases/" target="_blank">Data_bases</a></li>
+                <li><a href="labs/Data_science/" target="_blank">Data_science</a></li>
+                <li><a href="labs/Networks/" target="_blank">Networks</a></li>
+                <li><a href="labs/Operations_systems/" target="_blank">Operations_systems</a></li>
+                <li><a href="labs/Python/" target="_blank">Python</a></li>
+
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
